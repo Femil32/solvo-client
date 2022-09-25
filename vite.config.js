@@ -16,5 +16,12 @@ export default defineConfig(init => {
         define: {
             'process.env': config[init.mode],
         },
+        build: {
+            rollupOptions: {
+                external: [
+                    /^node:.*/,
+                ]
+            }
+        }
     }
 })
