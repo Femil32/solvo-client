@@ -19,9 +19,11 @@ export default defineConfig(init => {
         build: {
             rollupOptions: {
                 external: [
-                    /^node:.*/,
-                ]
-            }
-        }
+                    "react", // ignore react stuff
+                    "react-dom",
+                    "react-icons"
+                ],
+            },
+        },
     }
 })
