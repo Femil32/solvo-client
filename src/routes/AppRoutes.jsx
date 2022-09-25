@@ -10,7 +10,7 @@ import AuthLayout from '../layouts/auth'
 // pages
 import SignIn from '../pages/auth/SignIn'
 import SignUp from '../pages/auth/SignUp'
-import Home from '../pages/Home'
+import Home from '../pages'
 import Dashboard from '../pages/admin/Dashboard'
 import ProtectedRoutes from './ProtectedRoutes'
 import Challenge from '../pages/main/Challenges'
@@ -49,9 +49,9 @@ const AppRoutes = () => {
                         <Route path='user/profile' element={<Profile />} />
                     </Route>
                 </Route>
-                    <Route element={<DefaultLayout isSearchedNav={'false'} />}>
-                        <Route index element={<Home />} />
-                    </Route>
+                <Route element={<DefaultLayout isSearchedNav={'false'} />}>
+                    <Route path='/' element={<Home />} />
+                </Route>
                 <Route path="auth" element={<AuthLayout />} >
                     <Route path="signin" element={<SignIn />} />
                     <Route path="signup" element={<SignUp />} />
